@@ -7,6 +7,10 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+## Note
+
+Make sure to change the DB_DATABASE , DB_USERNAME , and DB_PASSWORD
+
 ## MySQL Database
 
 Here's the MySQL Database for this website, feel free to use it!
