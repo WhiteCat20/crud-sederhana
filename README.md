@@ -9,7 +9,7 @@
 
 ## Note
 
-Make sure to change the DB_DATABASE , DB_USERNAME , and DB_PASSWORD
+Make sure to change the DB_DATABASE , DB_USERNAME , and DB_PASSWORD at .env file
 
 ## MySQL Database
 
