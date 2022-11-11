@@ -17,3 +17,7 @@ Route::get('/', function(){
     return view('index');
 });
 Route::resource('/mahasiswa', MahasiswaController::class);
+
+Route::get('/hewan', function(){
+    return view('hewan.hewan');
+});

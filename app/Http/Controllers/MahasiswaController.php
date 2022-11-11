@@ -15,7 +15,7 @@ class MahasiswaController extends Controller
     public function index()
     {
         return view('mahasiswa', [
-            'mahasiswa' => Mahasiswa::all()
+            'mahasiswa' => Mahasiswa::all(),
         ]);
     }
 
@@ -46,7 +46,10 @@ class MahasiswaController extends Controller
             'jurusan' => ['required'],
         ]);
         Mahasiswa::create($validatedData);
-        return redirect('/mahasiswa')->with('Success', 'Mahasiswa Baru berhasil ditambahkan!');
+        return redirect('/mahasiswa')->with(
+            'Success',
+            'Mahasiswa Baru berhasil ditambahkan!'
+        );
     }
 
     /**
@@ -69,7 +72,7 @@ class MahasiswaController extends Controller
     public function edit(Mahasiswa $mahasiswa)
     {
         return view('update-mahasiswa', [
-            'mahasiswa' => $mahasiswa
+            'mahasiswa' => $mahasiswa,
         ]);
     }
 
@@ -94,7 +97,10 @@ class MahasiswaController extends Controller
         }
         $validatedData = $request->validate($rules);
         Mahasiswa::where('id', $mahasiswa->id)->update($validatedData);
-        return redirect('/mahasiswa')->with('Success', 'Mahasiswa berhasil diedit!');
+        return redirect('/mahasiswa')->with(
+            'Success',
+            'Mahasiswa berhasil diedit!'
+        );
     }
 
     /**
@@ -107,6 +113,9 @@ class MahasiswaController extends Controller
     {
         //
         Mahasiswa::destroy($mahasiswa->id);
-        return redirect('/mahasiswa')->with('Success', 'Mahasiswa berhasil dihapus!');
+        return redirect('/mahasiswa')->with(
+            'Success',
+            'Mahasiswa berhasil dihapus!'
+        );
     }
 }
